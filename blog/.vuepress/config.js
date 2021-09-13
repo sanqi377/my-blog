@@ -12,6 +12,7 @@ module.exports = {
       'markdown-it-task-lists': true
     }
   },
+  dest:'dist',
   theme: require.resolve('../../index'), // 使用本地主题
   themeConfig: require('./config/themeConfig')
 }
