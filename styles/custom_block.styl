@@ -1,0 +1,45 @@
+.custom-block
+  .custom-block-title
+    font-weight 600
+    margin-bottom -0.4rem
+  &.tip, &.warning, &.danger
+    padding .1rem 1.5rem
+    border-left-width 3px 
+    border-left-style solid
+    margin 1rem 0
+    border-radius: 3px;
+    word-break: break-word;
+    line-height: 1.8;
+    background-color var(--theme-accent-color-005);
+  &.tip
+    border-color var(--theme-accent-color)
+  &.warning
+    border-color darken(#ffe564, 35%)
+    color var(--theme-foreground-color)
+    .custom-block-title
+      color darken(#ffe564, 50%)
+    a
+      color var(--theme-foreground-color)
+  &.danger
+    border-color darken(red, 20%)
+    color var(--theme-foreground-color)
+    .custom-block-title
+      color darken(red, 40%)
+    a
+      color var(--theme-foreground-color)
+  &.details
+    display block
+    position relative
+    border-radius 2px
+    margin 1.6em 0
+    padding 1.6em
+    background-color var(--theme-accent-color-005)
+    h4
+      margin-top 0
+    figure, p
+      &:last-child
+        margin-bottom 0
+        padding-bottom 0
+    summary
+      outline none
+      cursor pointer

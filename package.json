@@ -1,0 +1,45 @@
+{
+  "name": "vuepress-theme-maker",
+  "version": "1.2.0",
+  "description": "🐉 A flat and clean Blog Theme for VuePress site | 一款多配置、简约风的VuePress主题.",
+  "keywords": [
+    "vuepress-theme-blog",
+    "vuepress-theme",
+    "blog-theme",
+    "vue",
+    "vuepress"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "80maker/vuepress-theme-maker"
+  },
+  "main": "index.js",
+  "scripts": {
+    "blog:dev": "vuepress dev blog",
+    "blog:build": "vuepress build blog",
+    "deploy": "sh deploy.sh"
+  },
+  "author": "80maker<cmgddd@126.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/80maker/vuepress-theme-maker/issues"
+  },
+  "homepage": "https://80shuo.com/",
+  "dependencies": {
+    "@vuepress/plugin-blog": "^1.9.3",
+    "@vuepress/plugin-medium-zoom": "^1.8.0",
+    "@vuepress/plugin-pwa": "^1.8.0",
+    "markdown-it-abbr": "^1.0.4",
+    "markdown-it-footnote": "^3.0.2",
+    "markdown-it-mark": "^3.0.1",
+    "markdown-it-task-lists": "^2.1.1",
+    "vuepress": "^1.7.1",
+    "vuepress-plugin-flowchart": "^1.4.3",
+    "vuepress-plugin-seo": "^0.1.4",
+    "vuepress-plugin-one-click-copy": "^1.0.2",
+    "valine": "^1.4.14"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}

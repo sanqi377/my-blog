@@ -1,0 +1,317 @@
+@require './fonts'
+@require './code'
+@require './custom_block'
+* {
+  box-sizing border-box
+}
+::selection
+    background-color var(--theme-accent-color)
+    color: #fff
+html
+  min-height 100vh
+body
+  margin 0
+body, html
+  font-size 14px
+#app
+  height 100%
+  overflow-x: hidden;
+body
+  font-family var(--theme-font-base)
+  font-display swap
+  color var(--theme-foreground-color)
+  background var(--theme-background)
+  background-attachment fixed
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+a
+  color: inherit
+  text-decoration-line: none;
+  &:link, &:visited
+    color var(--theme-foreground-color)
+  &:hover, &:active
+    color var(--theme-accent-color)
+blockquote
+  font-size 1rem
+  color #999;
+  border-left .2rem solid #dfe2e5
+  margin 1rem 0
+  padding .25rem 0 .25rem 1rem
+
+  & > p
+    margin 0
+
+ul, ol
+  padding-left 1.2em
+.theme-container
+  position relative
+  height 100%
+.theme-main
+  margin-left 280px
+  position relative
+.theme-main__inner
+  position: relative;
+  display: block;
+.router-link-active
+  color var(--theme-accent-color)
+.tac
+  text-align: center
+.mt-1
+  margin-top 4px
+.mt-2
+  margin-top 8px
+.mt-4
+  margin-top 16px
+.mt-7
+  margin-top 28px
+h1
+  font-size: 1.78571rem;
+h1,h2,h3,h4,h5,h6
+  font-family var(--theme-font-heading)
+  font-weight: 400;
+  padding-bottom 0
+  border-bottom none
+  line-height 1.5
+  &:focus .header-anchor,
+  &:hover .header-anchor
+    opacity: 1
+a.header-anchor
+  font-size 0.85em
+  float left
+  margin-left -0.87em
+  padding-right 0.23em
+  margin-top 0.125em
+  opacity 0
+
+  &:focus,
+  &:hover
+    text-decoration none
+img {
+  max-width: 100%;
+}
+
+// icon
+[class^="icon-"]
+  font-family Icon
+  font-style normal
+.icon-email:before
+    content: "\E913"
+.icon-github:before
+    content: "\E92D";
+.icon-qq:before
+    content: "\E920";
+.icon-feed:before
+    content: "\E924";
+.icon-calendar:before
+    content: "\E90E";
+.icon-author:before
+    content: "\E903";
+.icon-cate:before
+    content: "\E904";
+.icon-time:before
+    content: "\E910";
+.icon-sidebar:before
+    content: "\E926";
+.icon-down:before
+  content: "\E90B";
+.icon-up:before
+  content "\E90C"
+.icon-toc:before
+  content: "\E925";
+.icon-search:before 
+  content: "\E90D";
+.icon-exit:before
+  content: "\E928";
+.icon-folder-minus:before
+  content "\e900";
+.icon-folder-plus:before
+  content "\e901";
+.icon-minus-circle:before
+  content "\e923";
+.icon-minus-square:before
+  content "\e92e";
+.icon-minus:before
+  content "\e92f";
+.icon-plus-square:before
+  content "\e930";
+.icon-plus-circle:before
+  content "\e931";
+.icon-plus:before
+  content "\e932";
+.icon-external:before
+  content "\e929";
+.icon-check:before
+  content "\e92a";
+.icon-circle:before
+  content "\e92b";
+.icon-link:before
+  content "\e906";
+.icon-at:before
+  content "\e927";
+.icon-image:before
+  content "\e905";
+.icon-hash:before
+  content "\e907";
+.icon-dot:before
+  content "\e908";
+.icon-next:before
+  content "\e909";
+.icon-previous:before
+  content "\e90a";
+.icon-eye:before
+  content "\e90f";
+.icon-clock:before
+  content "\e910";
+.icon-loader:before
+  content "\e902";
+.icon-wechat:before
+  content "\e91c";
+.icon-paypal:before
+  content "\e919";
+.icon-bitcoin:before
+  content "\e91b";
+.icon-soundcloud:before
+  content "\e911";
+.icon-pinterest:before
+  content "\e91a";
+.icon-youtube:before
+  content "\e916";
+.icon-tumblr:before
+  content "\e914";
+.icon-linkedin:before
+  content "\e915";
+.icon-myspace:before
+  content "\e917";
+.icon-disqus:before
+  content "\e918";
+.icon-hangouts:before
+  content "\e912";
+.icon-facebook:before
+  content "\e91d";
+.icon-dribbble:before
+  content "\e91e";
+.icon-telegram:before
+  content "\e91f";
+.icon-instagram:before
+  content "\e921";
+.icon-weibo:before
+  content "\e922";
+.icon-twitter:before
+  content "\e92c";
+// post list
+.post-list
+  &__item
+    position relative
+    display flex
+    padding .5rem 0
+    padding-left 1.5rem
+    line-height 2rem
+    align-items center
+    &:after
+      position absolute
+      content '-'
+      left 0
+      width 1.5rem
+      text-align center
+  &__date
+    letter-spacing 1px
+    font-size .85rem
+    opacity .63
+    padding-right .5rem
+    font-family var(--theme-font-label) 
+  &__title
+    font-size 1.15rem
+
+// pagination
+#app .pagination
+  margin-top 2rem
+  margin-bottom 2rem
+  display: flex
+  justify-content: center
+#app .pagination > li
+  &.disabled
+    display: none
+  &.page-item
+    &.active > a
+      background var(--theme-accent-color)
+      color #ffffff
+    > a
+      font-family var(--theme-font-label)
+      margin: 0 3px;
+      padding 0
+      text-align center
+      line-height 2.4rem
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius 50%
+      border none
+      background none
+      &:hover
+        background var(--theme-accent-color)
+        color #ffffff
+  &:first-child > a, &:last-child > a
+    width: 2.4rem;
+    height: 2.4rem;
+    text-align center
+    line-height 2.4rem
+    padding 0
+    margin 0 3px
+    border-radius 50%
+    background none
+    border none
+    &:hover
+      background var(--theme-accent-color)
+      color #ffffff
+  &:first-child > a:after, &:last-child > a:after
+    text-align center
+    font-family Icon
+  &:first-child > a:after
+    content "\E90A"
+  &:last-child > a:after
+    content "\E909"
+
+// post
+// 动画
+@keyframes line-scale {
+  0% {
+      transform: scale3d(.8,.8,1)
+  }
+
+  to {
+      transform: none
+  }
+}
+// 评论
+.vssue
+  color var(--theme-foreground-color)
+  opacity .8
+  .vssue-new-comment, .vssue-header
+    border-bottom-color var(--theme-border-color)
+  .vssue-comment-avatar img
+    border-radius: 50%
+// 滚动条
+::-webkit-scrollbar
+  width: 8px;
+  height: 6px;
+::-webkit-scrollbar-thumb
+  background-color var(--theme-accent-color-02)
+  border-radius: 3px;
+  &:hover
+    background-color var(--theme-accent-color-04)
+::-webkit-scrollbar-track 
+  background var(--theme-card-background)
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+.medium-zoom-overlay
+  background: var(--theme-card-background)!important
+// 覆盖nprogress进度条颜色
+#nprogress
+  .bar
+    background var(--theme-accent-color)!important
+  .peg
+    box-shadow 0 0 10px var(--theme-accent-color), 0 0 5px var(--theme-accent-color)!important
+// 覆盖pagination分页颜色
+#app
+  .pagination > li > a,
+  .pagination > li > span
+    color var(--theme-accent-color)

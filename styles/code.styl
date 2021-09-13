@@ -1,0 +1,416 @@
+{$contentClass}, {$descClass}, .friend-link__content
+  blockquote
+    background: var(--theme-accent-color-005);
+    border-left: 3px solid #ccc;
+    border-radius 3px
+    margin: 1.5em 0;
+    padding: .5em 10px 1em;
+    quotes: "\201C""\201D""\2018""\2019";
+    &:before
+      color: #ccc;
+      content: open-quote;
+      font-size: 4em;
+      line-height: .1em;
+      margin-right: .25em;
+      vertical-align: -.4em;
+  table
+    max-width: 100%;
+    display: block;
+    border-collapse collapse
+    margin: 1rem 0;
+    overflow-x: auto
+
+
+  tr 
+    border-top: 1px solid #dfe2e5
+
+
+  tr:nth-child(2n)
+    background-color: var(--theme-bg-tertiary-color)
+
+  th
+    white-space: nowrap;
+    font-weight: 700;
+  td,th
+    border: 1px solid #dfe2e5;
+    padding: .6em 1em
+  pre, pre[class*="language-"]
+    border 1px solid var(--theme-border-color)
+    line-height 1.5
+    padding 1.25rem 1.5rem
+    margin 0.85rem 0
+    border-radius 6px
+    overflow auto
+    code
+      padding 0
+      background-color transparent
+      border-radius 0
+  &.copy-code-enabled div[class*="language-"]:hover
+    &::before
+      opacity: 0
+    .code-copy
+      opacity: 1
+  div[class*="language-"]
+    position relative
+    border-radius 6px
+    .highlight-lines
+      user-select none
+      padding-top 1.3rem
+      position absolute
+      top 0
+      left 0
+      width 100%
+      line-height 1.5
+      .highlighted
+        opacity: .2
+        background-color var(--theme-highlight-02)
+    pre, pre[class*="language-"]
+      background var(--theme-accent-color-005)
+      position relative
+      z-index 1
+      .code-copy
+        right: .8em
+    &::before
+      position absolute
+      z-index 3
+      top 0.8em
+      right 1em
+      font-size 0.75rem
+      color var(--theme-highlight-03-085)
+    &:not(.line-numbers-mode)
+      .line-numbers-wrapper
+        display none
+    &.line-numbers-mode
+      .highlight-lines .highlighted
+          position relative
+          &:before
+            content ' '
+            position absolute
+            z-index 3
+            left 0
+            top 0
+            display block
+            width $lineNumbersWrapperWidth
+            height 100%
+            opacity: .2
+          background-color var(--theme-highlight-02)
+      pre
+        padding-left $lineNumbersWrapperWidth + 1 rem
+        vertical-align middle
+      .line-numbers-wrapper
+        position absolute
+        top 0
+        width $lineNumbersWrapperWidth
+        text-align center
+        color var(--theme-highlight-03-085)
+        padding 1.25rem 0
+        line-height 1.5
+        br
+          user-select none
+        .line-number
+          position relative
+          z-index 4
+          user-select none
+          font-size 0.85em
+      &::after
+        content ''
+        position absolute
+        z-index 2
+        top 0
+        left 0
+        width $lineNumbersWrapperWidth
+        height 100%
+        border-radius 6px 0 0 6px
+        border-right 1px solid var(--theme-highlight-02-048)
+        background: var(--theme-highlight-01-048)
+
+
+  for lang in $codeLang
+    div{'[class~="language-' + lang + '"]'}
+      &:before
+        content ('' + lang)
+
+  div[class~="language-javascript"]
+    &:before
+      content "js"
+
+  div[class~="language-typescript"]
+    &:before
+      content "ts"
+
+  div[class~="language-markup"]
+    &:before
+      content "html"
+
+  div[class~="language-markdown"]
+    &:before
+      content "md"
+
+  div[class~="language-json"]:before
+    content "json"
+
+  div[class~="language-ruby"]:before
+    content "rb"
+
+  div[class~="language-python"]:before
+    content "py"
+
+  div[class~="language-bash"]:before
+    content "sh"
+
+  div[class~="language-php"]:before
+    content "php"
+    
+  code
+    color: var(--theme-highlight-04);
+    padding: .25rem .5rem;
+    margin: 0;
+    font-size: .85em;
+    background-color: var(--theme-accent-color-005);
+    border-radius: 3px;
+
+  // ========== mode ===========
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: var(--theme-highlight-04);
+    background: none;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    background: var(--theme-highlight-02);
+  }
+
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    background: var(--theme-highlight-02);
+  }
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: var(--theme-highlight-00);
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: var(--theme-highlight-03);
+  }
+
+  .token.punctuation {
+    color: var(--theme-highlight-04);
+  }
+
+  .token.delimiter.important,
+  .token.selector .parent,
+  .token.tag,
+  .token.tag .token.punctuation {
+    color: var(--theme-highlight-05);
+  }
+
+  .token.attr-name,
+  .token.boolean,
+  .token.boolean.important,
+  .token.number,
+  .token.constant,
+  .token.selector .token.attribute {
+    color: var(--theme-highlight-06);
+  }
+
+  .token.class-name,
+  .token.key,
+  .token.parameter,
+  .token.property,
+  .token.property-access,
+  .token.variable {
+    color: var(--theme-highlight-07);
+  }
+
+  .token.attr-value,
+  .token.inserted,
+  .token.color,
+  .token.selector .token.value,
+  .token.string,
+  .token.string .token.url-link {
+    color: var(--theme-highlight-08);
+  }
+
+  .token.builtin,
+  .token.keyword-array,
+  .token.package,
+  .token.regex {
+    color: var(--theme-highlight-09);
+  }
+
+  .token.function,
+  .token.selector .token.class,
+  .token.selector .token.id {
+    color: var(--theme-highlight-0a);
+  }
+
+  .token.atrule .token.rule,
+  .token.combinator,
+  .token.keyword,
+  .token.operator,
+  .token.pseudo-class,
+  .token.pseudo-element,
+  .token.selector,
+  .token.unit {
+    color: var(--theme-highlight-0b);
+  }
+
+  .token.deleted,
+  .token.important {
+    color: var(--theme-highlight-0c);
+  }
+
+  .token.keyword-this,
+  .token.this {
+    color: var(--theme-highlight-07);
+  }
+
+  .token.important,
+  .token.keyword-this,
+  .token.this,
+  .token.bold {
+    font-weight: bold;
+  }
+
+  .token.delimiter.important {
+    font-weight: inherit;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+
+  .language-markdown .token.title,
+  .language-markdown .token.title .token.punctuation {
+    color: var(--theme-highlight-07);
+    font-weight: bold;
+  }
+
+  .language-markdown .token.blockquote.punctuation {
+    color: var(--theme-highlight-09);
+  }
+
+  .language-markdown .token.code {
+    color: var(--theme-highlight-05);
+  }
+
+  .language-markdown .token.hr.punctuation {
+    color: var(--theme-highlight-07);
+  }
+
+  .language-markdown .token.url > .token.content {
+    color: var(--theme-highlight-08);
+  }
+
+  .language-markdown .token.url-link {
+    color: var(--theme-highlight-06);
+  }
+
+  .language-markdown .token.list.punctuation {
+    color: var(--theme-highlight-09);
+  }
+
+  .language-markdown .token.table-header {
+    color: var(--theme-highlight-04);
+  }
+
+  .language-json .token.operator {
+    color: var(--theme-highlight-04);
+  }
+
+  .language-scss .token.variable {
+    color: var(--theme-highlight-05);
+  }
+
+  /* overrides color-values for the Show Invisibles plugin
+  * https://prismjs.com/plugins/show-invisibles/
+  */
+  .token.tab:not(:empty):before,
+  .token.cr:before,
+  .token.lf:before,
+  .token.space:before {
+    color: var(--theme-highlight-03);
+  }
+
+  /* overrides color-values for the Match Braces plugin
+  * https://prismjs.com/plugins/match-braces/
+  */
+  .rainbow-braces .token.punctuation.brace-level-1,
+  .rainbow-braces .token.punctuation.brace-level-5,
+  .rainbow-braces .token.punctuation.brace-level-9 {
+    color: var(--theme-highlight-06);
+  }
+
+  .rainbow-braces .token.punctuation.brace-level-2,
+  .rainbow-braces .token.punctuation.brace-level-6,
+  .rainbow-braces .token.punctuation.brace-level-10 {
+    color: var(--theme-highlight-09);
+  }
+
+  .rainbow-braces .token.punctuation.brace-level-3,
+  .rainbow-braces .token.punctuation.brace-level-7,
+  .rainbow-braces .token.punctuation.brace-level-11 {
+    color: var(--theme-highlight-07);
+  }
+
+  .rainbow-braces .token.punctuation.brace-level-4,
+  .rainbow-braces .token.punctuation.brace-level-8,
+  .rainbow-braces .token.punctuation.brace-level-12 {
+    color: var(--theme-highlight-0a);
+  }
+
+
+  // 流程图
+  .vuepress-flowchart
+    overflow auto
+
+  // hr
+  hr
+    margin: 2.5em auto;
+    width: 4px;
+    height: 4px;
+    border: 0;
+    border-radius: 3px;
+    background-color: currentColor;
+    box-shadow: 1em 0 0 0 currentColor,-1em 0 0 0 currentColor
