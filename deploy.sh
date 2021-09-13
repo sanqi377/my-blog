@@ -7,7 +7,7 @@ set -e
 npm run blog:build
 
 # 进入生成的文件夹
-cd blog/.vuepress/dist
+cd dist
 
 # 如果是发布到自定义域名
 echo '80shuo.com' > CNAME
