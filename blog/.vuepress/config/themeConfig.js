@@ -26,7 +26,7 @@ module.exports = {
       link: '/rss.xml'
     }
   ],
-  copyright: '© 2022 ❤️ <a target="_blank" href="https://www.qblog.cc/">San Qi</a>',
+  copyright: '<p>© 2022 ❤️ <a target="_blank" href="https://www.qblog.cc/">San Qi</a></p><p><a href="http://www.beian.miit.gov.cn/">蜀ICP备15021049号-3</a></p>',
   blog: {
     directories: [
       {
