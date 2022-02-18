@@ -42,6 +42,7 @@ export default {
 // sidebar
 .theme-sidebar
   position: sticky
+  top: 0
   height: 100vh
   border-right 1px solid
   border-color var(--theme-border-color)
