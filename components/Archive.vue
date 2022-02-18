@@ -2,15 +2,25 @@
   <div class="theme-main__inner archive">
     <ul class="archive__list">
       <li class="archive__item" v-for="item of archiveList" :key="item.year">
-        <h2 class="archive__year">{{item.year}}</h2>
-        <div class="archive__sub-item" v-for="(subItem, key) of item.list" :key="key">
+        <h2 class="archive__year">{{ item.year }}</h2>
+        <div
+          class="archive__sub-item"
+          v-for="(subItem, key) of item.list"
+          :key="key"
+        >
           <div class="archive__month-wrap">
-            <span class="archive__month"> {{key}} </span>
+            <span class="archive__month"> {{ key }} </span>
           </div>
           <div class="archive__leaf-list">
-            <a class="archive__leaf-item" :href="leafItem.path" v-for="leafItem in subItem" :key="leafItem.key">
-              <span class="archive__date">{{leafItem.date}}</span>
-              <span class="archive__title">{{leafItem.title}}</span>
+            <a
+              class="archive__leaf-item"
+              v-for="leafItem in subItem"
+              :key="leafItem.key"
+            >
+              <router-link :to="leafItem.path">
+                <span class="archive__date">{{ leafItem.date }}</span>
+                <span class="archive__title">{{ leafItem.title }}</span>
+              </router-link>
             </a>
           </div>
         </div>
@@ -19,52 +29,65 @@
   </div>
 </template>
 <script>
-const DATE_MAP = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+const DATE_MAP = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 export default {
-  name: 'Archive',
+  name: "Archive",
   computed: {
     archiveList() {
       let res = {};
       let tmp = [];
-      let list = this.$site.pages.filter(item => {
-        return item.pid === 'post';
+      let list = this.$site.pages.filter((item) => {
+        return item.pid === "post";
       });
-      list = list.sort((a,b) => {
+      list = list.sort((a, b) => {
         let time1 = new Date(a.frontmatter.date);
         let time2 = new Date(b.frontmatter.date);
         return time2 - time1;
-      })
-      list.map(item => {
-        const date = new Date(item.frontmatter.date)
+      });
+      list.map((item) => {
+        const date = new Date(item.frontmatter.date);
         const year = date.getFullYear();
         const month = date.getMonth();
-        const monthKey = DATE_MAP[month]
+        const monthKey = DATE_MAP[month];
         const day = `${date.getDate()}`;
         res[year] || (res[year] = {});
         res[year][monthKey] || (res[year][monthKey] = []);
         item.date = `${`${month + 1}`.padStart(2, 0)}-${day.padStart(2, 0)}`;
         res[year][monthKey].push(item);
-      })
+      });
       for (let [key, item] of Object.entries(res)) {
         tmp.push({
           year: +key,
-          list: item
+          list: item,
         });
       }
       tmp.sort((a, b) => {
         return b.year - a.year;
-      })
+      });
       return tmp;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style lang="stylus">
 .archive
   border-radius 6px
   padding 2.15rem
   border-color var(--theme-border-color)
-  background var(--theme-card-background) 
+  background var(--theme-card-background)
   &__list
     margin 0
     padding-left 0
@@ -134,7 +157,7 @@ export default {
     padding .5rem 0
     padding-left 1.5rem
     line-height 2rem
-    align-items flex-start 
+    align-items flex-start
     &:after
       position absolute
       content '-'

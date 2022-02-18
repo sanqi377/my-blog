@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Im\'s Sanqi',
+  title: 'San‘qi Blog',
   description: '坚持是对平庸最好的打击！',
   port: 8088,
   markdown: {

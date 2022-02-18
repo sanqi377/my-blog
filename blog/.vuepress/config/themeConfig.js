@@ -1,36 +1,32 @@
 module.exports = {
-  siteName: '1980\'s Sanqi',
+  siteName: 'Sanqi Blog',
   logo: '/logo.jpg',
   siteDesc: '坚持是对平庸最好的打击！',
   nav: [
     { text: '🏠 Home', link: '/' },
-    { text: '📖 Theme', link: '/categories/theme/' },
-    { text: '🐉 Maker', link: '/categories/maker/' },
-    { text: '🔥 Animation', link: '/categories/animation/' },
-    { text: '📽 Old Time', link: '/categories/oldtime/' },
-    { text: '🔗 friend-links', link: '/friend-links/' },
+    { text: '📖 Essays', link: '/categories/essays/' },
+    // { text: '🐉 Maker', link: '/categories/maker/' },
+    // { text: '🔥 Animation', link: '/categories/animation/' },
+    // { text: '📽 Old Time', link: '/categories/oldtime/' },
+    // { text: '🔗 friend-links', link: '/friend-links/' },
   ],
   searchPlaceholder: 'Search',
   searchMaxSuggestions: 10,
   social: [
     {
       type: 'email',
-      link: 'cmgddd@163.com'
+      link: 'sanqi377@outlook.com'
     },
     {
       type: 'github',
-      link: '80maker/vuepress-theme-maker'
-    },
-    {
-      type: 'qq',
-      link: '//qm.qq.com/cgi-bin/qm/qr?k=fknyQ434nkzVUWUmJ6rpIPctkS9eyQaZ&jump_from=webapi'
+      link: 'sanqi377'
     },
     {
       type: 'feed',
       link: '/rss.xml'
     }
   ],
-  copyright: '© 2020 ❤️ <a target="_blank" href="https://17ria.com/">Neil Chen</a>',
+  copyright: '© 2022 ❤️ <a target="_blank" href="https://www.qblog.cc/">San Qi</a>',
   blog: {
     directories: [
       {
@@ -71,11 +67,11 @@ module.exports = {
       }
     ],
     sitemap: {
-      hostname: 'https://80shuo.com',
+      hostname: 'https://www.qblog.cc',
       exclude: ['/404.html']
     },
     feed: {
-      canonical_base: 'http://80shuo.com',
+      canonical_base: 'https://www.qblog.cc',
     },
     palette: {},
     comment: {}

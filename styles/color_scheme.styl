@@ -1,5 +1,5 @@
-$lightMode = 
-  --theme-background #ffffff url('../assets/images/bg.png')
+$lightMode =
+  --theme-background #f3f6f7
   --theme-accent-color $accentColor
   --theme-foreground-color: $textColor;
   --theme-border-color: $borderColor;
@@ -61,12 +61,12 @@ $darkMode =
 
 html
   --theme-content-width: 660px;
-  --theme-font-base: 'Josefin Sans','PingFang SC','Microsoft YaHei';
-  --theme-font-logo: Lobster,cursive,'Josefin Sans','PingFang SC','Microsoft YaHei';
-  --theme-font-menu: IM Fell DW Pica SC,'Josefin Sans','PingFang SC','Microsoft YaHei';
-  --theme-font-heading: impact,'Josefin Sans','PingFang SC','Microsoft YaHei';
-  --theme-font-label: Sarpanch,'Josefin Sans','PingFang SC','Microsoft YaHei';
-  --theme-font-print: 'PingFang SC','Microsoft YaHei';
+  --theme-font-base: 'Josefin Sans', 'PingFang SC', 'Microsoft YaHei';
+  --theme-font-logo: Lobster, cursive, 'Josefin Sans', 'PingFang SC', 'Microsoft YaHei';
+  --theme-font-menu: IM Fell DW Pica SC, 'Josefin Sans', 'PingFang SC', 'Microsoft YaHei';
+  --theme-font-heading: 'Josefin Sans', 'PingFang SC', 'Microsoft YaHei';
+  --theme-font-label: Sarpanch, 'Josefin Sans', 'PingFang SC', 'Microsoft YaHei';
+  --theme-font-print: 'PingFang SC', 'Microsoft YaHei';
   {$lightMode}
 
 @media (prefers-color-scheme: dark)
@@ -77,7 +77,7 @@ html
 
 html.light
   {$lightMode}
-  
+
 html.dark
   {$darkMode}
   .float-menu:before

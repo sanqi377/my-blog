@@ -1,15 +1,23 @@
 <template>
   <div class="theme-main__inner theme-category">
     <div class="theme-category__list">
-      <h1 class="theme-category__title">{{$category.list.length}} categories in total</h1>
-      <router-link class="theme-category__link" v-for="item in $category.list" :key="item.name" :to="item.path">▪ {{ item.name }} [{{item.pages.length}}]</router-link>
+      <h1 class="theme-category__title">
+        {{ $category.list.length }} categories in total
+      </h1>
+      <router-link
+        class="theme-category__link"
+        v-for="item in $category.list"
+        :key="item.name"
+        :to="item.path"
+        >▪ {{ item.name }} [{{ item.pages.length }}]</router-link
+      >
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'Category'
-}
+  name: "Category",
+};
 </script>
 <style lang="stylus">
 .theme-category
@@ -31,5 +39,4 @@ export default {
     &:hover
       background var(--theme-accent-color)
       color #ffffff
-  
 </style>

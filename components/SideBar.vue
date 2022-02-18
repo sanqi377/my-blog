@@ -41,10 +41,8 @@ export default {
 <style lang="stylus">
 // sidebar
 .theme-sidebar
-  position fixed
-  top 0
-  bottom 0
-  left 0
+  position: sticky
+  height: 100vh
   border-right 1px solid
   border-color var(--theme-border-color)
   &__inner

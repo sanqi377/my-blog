@@ -1,7 +1,7 @@
 ---
 title: It is always a pleasure to greet a friend from afar ~
 cover: /images/friend.jpg
-links: 
+links:
   - title: Ikeq Cheng
     roundness: true
     logo: https://www.gravatar.com/avatar/06818ca4361a28447cffdd2daaed2799?s=160
