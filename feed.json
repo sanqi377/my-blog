@@ -1,0 +1,63 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "San‘qi Blog",
+    "home_page_url": "https://www.qblog.cc",
+    "feed_url": "https://www.qblog.cc/feed.json",
+    "description": "坚持是对平庸最好的打击！",
+    "items": [
+        {
+            "id": "https://www.qblog.cc/post/2022/02/19/docker-common-commands.html",
+            "url": "https://www.qblog.cc/post/2022/02/19/docker-common-commands.html",
+            "title": "Docker 常用命令",
+            "summary": "docker images\nOptions\n  a：列出所有镜像",
+            "date_modified": "2022-02-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://www.qblog.cc/post/2022/02/19/javascript-money-formate.html",
+            "url": "https://www.qblog.cc/post/2022/02/19/javascript-money-formate.html",
+            "title": "JavaScript 对数组进行三位分割格式化及货币格式化",
+            "date_modified": "2022-02-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://www.qblog.cc/post/2022/02/19/docker-install.html",
+            "url": "https://www.qblog.cc/post/2022/02/19/docker-install.html",
+            "title": "Centos 安装 Docker 及 DockerCompose",
+            "date_modified": "2022-02-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://www.qblog.cc/post/2021/01/12/theme-showcase.html",
+            "url": "https://www.qblog.cc/post/2021/01/12/theme-showcase.html",
+            "title": "Maker Theme Markdown 语法示例",
+            "summary": "网站内部的链接，将会被转换成 ` 用于 SPA 导航。同时，站内的每一个文件夹下的 README.md 或者 index.md 文件都会被自动编译为 index.html，对应的链接将被视为 /`。",
+            "image": "https://vuepress.vuejs.org/architecture.png",
+            "date_modified": "2021-01-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://www.qblog.cc/post/2022/04/17/vue3-json-render.html",
+            "url": "https://www.qblog.cc/post/2022/04/17/vue3-json-render.html",
+            "title": "Vue3 通过 JSON 渲染 ElementUI Table 组件的列",
+            "summary": "import Sqtable from \"./Sqtable.jsx\" // 引入自定义组件",
+            "date_modified": "2022-04-17T00:00:00.000Z"
+        },
+        {
+            "id": "https://www.qblog.cc/post/2022/02/20/rich-text-editor.html",
+            "url": "https://www.qblog.cc/post/2022/02/20/rich-text-editor.html",
+            "title": "JavaScript 写一个简易富文本编辑器",
+            "summary": "width: 600px;\n        margin: 0 auto;\n        background-color: #f5f5f5;\n        height: 300px;\n        padding: 15px;\n      }",
+            "date_modified": "2022-02-20T00:00:00.000Z"
+        },
+        {
+            "id": "https://www.qblog.cc/post/2022/02/20/python-auto-sign.html",
+            "url": "https://www.qblog.cc/post/2022/02/20/python-auto-sign.html",
+            "title": "Python 实现自动提交请求并发送结果到邮箱（可用于打卡签到）",
+            "summary": "message['To'] = mailconfig['mailreceivers']",
+            "date_modified": "2022-02-20T00:00:00.000Z"
+        },
+        {
+            "id": "https://www.qblog.cc/post/2022/02/18/sticky-failure.html",
+            "url": "https://www.qblog.cc/post/2022/02/18/sticky-failure.html",
+            "title": "CSS position:sticky 失效原因及注意点",
+            "date_modified": "2022-02-18T00:00:00.000Z"
+        }
+    ]
+}
